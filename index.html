@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es" class="">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Tec - Carlos Jhesid Lazo Nina</title>
+    <title>Tech Portfolio - Carlos Jhesid Lazo Nina</title>
 
     <!-- -->
 
@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
-        /* === Variables CSS para Temas === */
+        /* === CSS Variables for Themes === */
         :root {
             --color-bg-light: #f1f5f9; /* slate-100 */
-            --color-bg-dark: #0A192F; /* Azul marino oscuro */
+            --color-bg-dark: #0A192F; /* Dark navy blue */
             --color-text-light: #1e293b; /* slate-800 */
             --color-text-dark: #cbd5e1; /* slate-300 */
             --color-accent: #22d3ee; /* cyan-400 */
@@ -23,20 +23,20 @@
             --color-heading-light: #0f172a; /* slate-900 */
             --color-heading-dark: #f1f5f9; /* slate-100 */
             --color-card-light: #ffffff; /* white */
-            --color-card-dark: #112240; /* Azul marino claro */
+            --color-card-dark: #112240; /* Light navy blue */
             --color-border-light: #cbd5e1; /* slate-300 */
-            --color-border-dark: #475569; /* slate-600 - Ajustado para más visibilidad */
+            --color-border-dark: #475569; /* slate-600 - Adjusted for more visibility */
             --color-link-light: #64748b; /* slate-500 */
             --color-link-dark: #94a3b8; /* slate-400 */
-            --color-shadow-light: rgba(100, 116, 139, 0.2); /* Sombra suave */
-            --color-shadow-dark: rgba(0, 0, 0, 0.4); /* Sombra oscura */
+            --color-shadow-light: rgba(100, 116, 139, 0.2); /* Soft shadow */
+            --color-shadow-dark: rgba(0, 0, 0, 0.4); /* Dark shadow */
 
-            /* Transiciones */
+            /* Transitions */
             --transition-speed: 300ms;
             --transition-ease: ease-in-out;
         }
 
-        /* === Reset Básico y Estilos Globales === */
+        /* === Basic Reset and Global Styles === */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -45,7 +45,7 @@
 
         html {
             scroll-behavior: smooth;
-            font-size: 16px; /* Base para rem */
+            font-size: 16px; /* Base for rem */
         }
 
         body {
@@ -57,16 +57,16 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Estilos para modo oscuro aplicados al body cuando html tiene clase 'dark' */
+        /* Styles for dark mode applied to the body when html has class 'dark' */
         html.dark body {
             background-color: var(--color-bg-dark);
             color: var(--color-text-dark);
         }
 
-        /* Estilos base para títulos */
+        /* Base styles for headings */
         h1, h2, h3, h4, h5, h6 {
             color: var(--color-heading-light);
-            margin-bottom: 1rem; /* Espaciado base */
+            margin-bottom: 1rem; /* Base spacing */
         }
         html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
             color: var(--color-heading-dark);
@@ -95,7 +95,7 @@
             padding: 5rem 1rem; /* py-20 px-4 */
         }
 
-        /* Contenedor principal */
+        /* Main container */
         .container {
             max-width: 64rem; /* max-w-6xl */
             margin-left: auto;
@@ -111,7 +111,7 @@
         }
 
 
-        /* === Barra de Navegación === */
+        /* === Navigation Bar === */
         .navbar {
             position: fixed;
             top: 0;
@@ -134,7 +134,7 @@
             justify-content: space-between;
             align-items: center;
             height: 4rem; /* h-16 */
-            max-width: 64rem; /* Ajustado para navbar */
+            max-width: 64rem; /* Adjusted for navbar */
         }
         .navbar-brand {
             font-size: 1.5rem; /* text-2xl */
@@ -147,10 +147,10 @@
          }
          .navbar-brand:hover {
              transform: translateY(-1px);
-             color: var(--color-accent); /* Mismo color hover que modo oscuro */
+             color: var(--color-accent); /* Same hover color as dark mode */
          }
         .navbar-links {
-            display: none; /* Oculto en móvil */
+            display: none; /* Hidden on mobile */
         }
         @media (min-width: 768px) { /* md */
             .navbar-links {
@@ -203,17 +203,17 @@
          html.dark #theme-toggle:hover {
               background-color: rgba(255,255,255,0.1);
          }
-         /* Ocultar/mostrar iconos de tema */
+         /* Hide/show theme icons */
          #theme-toggle .icon.hidden { display: none; }
 
         #theme-toggle-sun {
-            color: var(--color-text-light); /* Color por defecto */
+            color: var(--color-text-light); /* Default color */
         }
         html.dark #theme-toggle-sun {
-            color: var(--color-heading-dark); /* Cambia a blanco en modo oscuro */
+            color: var(--color-heading-dark); /* Changes to white in dark mode */
         }
 
-        /* === Sección Hero === */
+        /* === Hero Section === */
         #hero {
             min-height: 100vh;
             display: flex;
@@ -223,14 +223,14 @@
             padding-top: 6rem; /* pt-24 */
             padding-bottom: 4rem; /* pb-16 */
             background-image: linear-gradient(to bottom right, #f8fafc, #f1f5f9, #ecfeff); /* from-slate-50 via-slate-100 to-cyan-50 */
-            position: relative; /* Para el fondo tech-bg */
+            position: relative; /* For the tech-bg background */
             overflow: hidden;
         }
         html.dark #hero {
              background-image: linear-gradient(to bottom right, var(--color-bg-dark), #0f172a, var(--color-bg-dark)); /* dark:from-tech-bg-dark dark:via-slate-900 dark:to-tech-bg-dark */
         }
         #hero .container {
-            position: relative; /* Para estar sobre el ::before */
+            position: relative; /* To be above the ::before */
             z-index: 10;
         }
         .profile-pic {
@@ -296,7 +296,7 @@
                 gap: 1rem; /* sm:space-x-4 */
             }
          }
-         /* Animación del nombre */
+         /* Name animation */
          .animated-name span {
             animation: colorCycle 8s infinite linear;
             display: inline-block;
@@ -308,7 +308,7 @@
             100% { color: var(--color-accent); }
          }
 
-        /* === Botones === */
+        /* === Buttons === */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -344,7 +344,7 @@
         }
         html.dark .btn-primary {
             background-color: var(--color-accent);
-            color: var(--color-bg-dark); /* Texto oscuro sobre acento claro */
+            color: var(--color-bg-dark); /* Dark text on light accent */
         }
         html.dark .btn-primary:hover {
              background-color: var(--color-accent-hover);
@@ -370,21 +370,21 @@
              border-color: var(--color-accent);
          }
 
-        /* === Iconos === */
+        /* === Icons === */
         .icon {
             display: inline-block;
             width: 1.25rem; /* w-5 */
             height: 1.25rem; /* h-5 */
             vertical-align: middle;
-            stroke: currentColor; /* Usa color del texto padre */
+            stroke: currentColor; /* Uses color of parent text */
             stroke-width: 2;
-            fill: none; /* La mayoría de Lucide son stroke-based */
+            fill: none; /* Most Lucide icons are stroke-based */
         }
         .icon-lg { width: 1.5rem; height: 1.5rem; } /* w-6 h-6 */
         .icon-sm { width: 1rem; height: 1rem; } /* w-4 h-4 */
         .icon-accent { color: var(--color-accent); }
 
-        /* === Secciones Generales === */
+        /* === General Sections === */
         #about { background-color: #f8fafc; } /* bg-slate-50 */
         html.dark #about { background-color: var(--color-card-dark); } /* dark:bg-tech-card-dark */
 
@@ -397,7 +397,7 @@
         #contact { background-image: linear-gradient(to bottom right, #f1f5f9, #ffffff, #ecfeff); } /* bg-gradient-to-br from-slate-100 via-white to-cyan-50 */
         html.dark #contact { background-image: linear-gradient(to bottom right, var(--color-bg-dark), #0f172a, var(--color-bg-dark)); } /* dark:from-tech-bg-dark dark:via-slate-900 dark:to-tech-bg-dark */
 
-        /* === Sección About === */
+        /* === About Section === */
         #about .grid {
             display: grid;
             gap: 3rem; /* gap-12 */
@@ -502,7 +502,7 @@
                  color: #64748b; /* dark:text-slate-500 */
             }
 
-        /* === Sección Experience (Timeline) === */
+        /* === Experience Section (Timeline) === */
         .timeline-container {
             position: relative;
             border-left: 2px solid rgba(34, 211, 238, 0.3); /* border-l-2 border-cyan-500/30 */
@@ -537,11 +537,11 @@
                box-shadow: 0 20px 25px -5px rgba(103, 232, 249, 0.1), 0 8px 10px -6px rgba(103, 232, 249, 0.1);
           }
 
-        /* Círculo en la línea de tiempo */
+        /* Circle on the timeline */
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -2.3rem; /* Ajuste para alinear con la línea (-9px + padding + border) */
+            left: -2.3rem; /* Adjustment to align with the line (-9px + padding + border) */
             top: 0.25rem; /* top-1 */
             width: 1rem; /* w-4 */
             height: 1rem; /* h-4 */
@@ -550,24 +550,24 @@
             border: 4px solid var(--color-bg-light); /* border-4 */
         }
          html.dark .timeline-item::before {
-             border-color: var(--color-card-dark); /* Coincide con fondo de tarjeta */
+             border-color: var(--color-card-dark); /* Matches card background */
          }
 
-        /* Línea punteada entre items */
+        /* Dashed line between items */
         .timeline-line {
             position: absolute;
-            left: -1.5rem; /* Ajuste para alinear con el centro del círculo */
+            left: -1.5rem; /* Adjustment to align with the center of the circle */
             top: 2rem; /* top-8 */
-            bottom: -2.5rem; /* Extiende hasta el siguiente item (gap) */
+            bottom: -2.5rem; /* Extends to the next item (gap) */
             width: 2px; /* border-l-2 */
-            background-image: linear-gradient(to bottom, #67e8f9 40%, transparent 60%); /* Simula dashed */
+            background-image: linear-gradient(to bottom, #67e8f9 40%, transparent 60%); /* Simulates dashed */
             background-size: 1px 10px;
             background-repeat: repeat-y;
         }
         html.dark .timeline-line {
              background-image: linear-gradient(to bottom, rgba(103, 232, 249, 0.5) 40%, transparent 60%);
         }
-        /* Ocultar línea en el último item */
+        /* Hide line on the last item */
         .timeline-item:last-child .timeline-line {
             display: none;
         }
@@ -602,16 +602,16 @@
              color: var(--color-text-dark); /* slate-300 */
          }
 
-        /* === Sección Proyectos === */
-        #projects .project-grid {
+        /* === Projects Section === */
+        #projects .project-grid, #ia-agents .project-grid {
             display: grid;
             gap: 2rem; /* gap-8 */
         }
          @media (min-width: 768px) { /* md */
-            #projects .project-grid { grid-template-columns: repeat(2, 1fr); } /* md:grid-cols-2 */
+            #projects .project-grid, #ia-agents .project-grid { grid-template-columns: repeat(2, 1fr); } /* md:grid-cols-2 */
          }
           @media (min-width: 1024px) { /* lg */
-            #projects .project-grid { grid-template-columns: repeat(3, 1fr); } /* lg:grid-cols-3 */
+            #projects .project-grid, #ia-agents .project-grid { grid-template-columns: repeat(3, 1fr); } /* lg:grid-cols-3 */
          }
         .project-card {
             background-color: var(--color-card-light);
@@ -654,8 +654,7 @@
         html.dark .project-card:nth-child(3) .project-card-image { --color1: #831843; --color2: #7f1d1d; } /* dark:from-pink-700 dark:to-red-900 */
 
         .project-card-image .project-icon {
-            width: 3rem; /* w-12 */
-            height: 3rem; /* h-12 */
+            width: 8rem; /* w-12 */
             color: rgba(255, 255, 255, 0.8); /* text-white/80 */
             stroke-width: 1.5;
             z-index: 10;
@@ -807,10 +806,10 @@
                 </a>
             </div>
             <div class="navbar-links">
-                <a href="#about" class="nav-link">Acerca de</a>
-                <a href="#experience" class="nav-link">Experiencia</a>
-                <a href="#projects" class="nav-link">Proyectos</a>
-                <a href="#contact" class="nav-link">Contacto</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="navbar-actions">
                 <a href="https://linkedin.com/in/jhesidlazo" target="_blank" rel="noopener noreferrer" class="icon-link" title="LinkedIn">
@@ -835,16 +834,16 @@
         <div class="container">
              <img
                 src="./perfil.png" /* Usar URL pública */
-                alt="Foto de perfil de Jhesid Lazo"
+                alt="Profile picture of Jhesid Lazo"
                 class="profile-pic"
-                onerror="this.onerror=null; this.src='https://placehold.co/160x160/0A192F/CCD6F6?text=CL'; this.alt='[Imagen no disponible]';"
+                onerror="this.onerror=null; this.src='https://placehold.co/160x160/0A192F/CCD6F6?text=CL'; this.alt='[Image not available]';"
              >
 
             <h1> 
-              Hola, soy <span class="animated-name"><span>Ing. Carlos Jhesid Lazo Nina</span></span>
+              Hello, I'm <span class="animated-name"><span>Eng. Carlos Jhesid Lazo Nina</span></span>
             </h1>
             <p class="subtitle">
-        Desarrollador Web | Analista de Datos | Ingeniero de Software | Machine Learning Proyects Developer
+        Web Developer | Data Analyst | Software Engineer | Machine Learning Projects Developer | IA Agent Developer
             </p>
             <div class="location-info">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -852,26 +851,114 @@
             </div>
             <div class="hero-actions">
               <a href="#contact" class="btn btn-primary">
-                Contáctame
+                Contact Me
               </a>
               <a href="#projects" class="btn btn-secondary">
-                Ver Proyectos
+                View Projects
               </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== IA Agent Projects Section ===== -->
+    <section id="ia-agents">
+        <div class="container">
+            <h2 class="section-title">IA Agent Projects</h2>
+            <p>
+                This section showcases my work on Intelligent Agent development.
+            </p>
+            <div class="project-grid">
+                <!-- Add IA Agent project cards here -->
+                 <div class="project-card card hover-lift-xl">
+                    <div class="project-card-image">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fva.presidencia.gob.bo%2Fimages%2Flogos-entidadesDesconcentradas%2Fagetic_ok.png&f=1&nofb=1&ipt=50cdfe7deac04611e6be83063d0f4ce51a6b770f84fce46b8b228e42dce1f910" alt="AGETIC" class="project-icon">
+                   
+                    </div>
+                    <div class="project-card-content">
+                        <h3>IA Agent Project 1</h3>
+                        <p>This project uses AI to generate personalized content recommendations.</p>
+                        <div class="tags">
+                            <span class="tech-tag">IA Agent</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Recommender System</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="project-card card hover-lift-xl">
+                    <div class="project-card-image">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fva.presidencia.gob.bo%2Fimages%2Flogos-entidadesDesconcentradas%2Fagetic_ok.png&f=1&nofb=1&ipt=50cdfe7deac04611e6be83063d0f4ce51a6b770f84fce46b8b228e42dce1f910" alt="AGETIC" class="project-icon">
+                   
+                    </div>
+                    <div class="project-card-content">
+                        <h3>IA Agent Project 2</h3>
+                        <p>This project uses AI to automate customer service interactions.</p>
+                        <div class="tags">
+                            <span class="tech-tag">IA Agent</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Chatbot</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="project-card card hover-lift-xl">
+                    <div class="project-card-image">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fva.presidencia.gob.bo%2Fimages%2Flogos-entidadesDesconcentradas%2Fagetic_ok.png&f=1&nofb=1&ipt=50cdfe7deac04611e6be83063d0f4ce51a6b770f84fce46b8b228e42dce1f910" alt="AGETIC" class="project-icon">
+                   
+                    </div>
+                    <div class="project-card-content">
+                        <h3>IA Agent Project 3</h3>
+                        <p>This project uses AI to detect fraud in financial transactions.</p>
+                        <div class="tags">
+                            <span class="tech-tag">IA Agent</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Fraud Detection</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="project-card card hover-lift-xl">
+                    <div class="project-card-image">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fva.presidencia.gob.bo%2Fimages%2Flogos-entidadesDesconcentradas%2Fagetic_ok.png&f=1&nofb=1&ipt=50cdfe7deac04611e6be83063d0f4ce51a6b770f84fce46b8b228e42dce1f910" alt="AGETIC" class="project-icon">
+                   
+                    </div>
+                    <div class="project-card-content">
+                        <h3>IA Agent Project 4</h3>
+                        <p>This project uses AI to predict customer churn.</p>
+                        <div class="tags">
+                            <span class="tech-tag">IA Agent</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Customer Churn</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="project-card card hover-lift-xl">
+                    <div class="project-card-image">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fva.presidencia.gob.bo%2Fimages%2Flogos-entidadesDesconcentradas%2Fagetic_ok.png&f=1&nofb=1&ipt=50cdfe7deac04611e6be83063d0f4ce51a6b770f84fce46b8b228e42dce1f910" alt="AGETIC" class="project-icon">
+                   
+                    </div>
+                    <div class="project-card-content">
+                        <h3>IA Agent Project 5</h3>
+                        <p>This project uses AI to optimize supply chain logistics.</p>
+                        <div class="tags">
+                            <span class="tech-tag">IA Agent</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Supply Chain</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="about">
          <div class="container">
-            <h2 class="section-title">Acerca de Mí</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="grid">
                <div class="about-text">
                  <p>
-                   Soy un profesional enérgico y dedicado con un estilo de liderazgo proactivo, fuertes habilidades de trabajo en equipo y un alto sentido de responsabilidad. Afronto los desafíos con una actitud de 'Puedo hacerlo', siempre completamente dedicado a mis tareas. Me apasiona la industria tecnológica y me encanta explorar nuevas oportunidades a través de viajes y trabajo de campo. También tengo experiencia en desarrollo de software y análisis de datos.
+                   I am an energetic and dedicated professional with a proactive leadership style, strong teamwork skills, and a high sense of responsibility. I approach challenges with a 'Can-Do' attitude, always fully dedicated to my tasks. I am passionate about the technology industry and love exploring new opportunities through travel and fieldwork. I also have experience in software development and data analysis.
                  </p>
                </div>
-               <div class="skills-card card"> 
-                 <h3>Habilidades Clave</h3>
+               <div class="skills-card card">
+                 <h3>Key Skills</h3>
                  <ul class="skills-list">
                     <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> JavaScript</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> NEXT JS</li>
@@ -879,148 +966,117 @@
                     <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Type ORM</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Python</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><path d="M12 2a10 10 0 1 0 10 10c0-4.42-3.58-8-8-8"></path><path d="M12 2a10 10 0 1 0 10 10c0-4.42-3.58-8-8-8"></path><path d="M12 2a10 10 0 1 0 10 10c0-4.42-3.58-8-8-8"></path><path d="M12 2a10 10 0 1 0 10 10c0-4.42-3.58-8-8-8"></path><path d="M12 12v4h4"></path><path d="M12 12H8v4"></path><path d="M12 12v-4H8"></path><path d="M12 12h4v-4"></path></svg> Machine Learning</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg> Análisis de Datos</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg> Data Analysis</li>
                     <!-- <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg> Aspen HYSYS</li> -->
                     <!-- <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg> AutoCAD</li> -->
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Trabajo en Equipo</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path></svg> Comunicación</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg> Inglés (C1)</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Teamwork</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path></svg> Communication</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-accent"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg> English (C1)</li>
                  </ul>
                </div>
             </div>
-             <!-- <div class="education-section">
-                 <h3>Educación</h3>
-                 <div class="education-list">
-                     <div class="education-item card hover-lift">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-lg icon-accent"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.084a1 1 0 0 0-.019 1.838l9.45 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>
-                         <div>
-                             <h4>Ingeniero en Petróleo, Gas y Procesos</h4>
-                             <p class="institution">Universidad Mayor de San Andrés - UMSA</p>
-                             <p class="period">Finalizado Dic 2024 (Estimado)</p>
-                         </div>
-                     </div>
-                      <div class="education-item card hover-lift">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-lg icon-accent"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.084a1 1 0 0 0-.019 1.838l9.45 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>
-                         <div>
-                             <h4>Diplomado en Salud Ocupacional y Seguridad Industrial</h4>
-                             <p class="institution">Universidad Pública de El Alto</p>
-                             <p class="period">Ene 2024 - Actualidad</p>
-                         </div>
-                     </div>
-                      <div class="education-item card hover-lift">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon icon-lg icon-accent"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.084a1 1 0 0 0-.019 1.838l9.45 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>
-                         <div>
-                             <h4>Programa de Inglés Avanzado (C1)</h4>
-                             <p class="institution">CBA - La Paz</p>
-                             <p class="period">Finalizado Mar 2019</p>
-                         </div>
-                     </div>
-                 </div>
-             </div> -->
         </div>
     </section>
 
-    <!-- ===== Sección Experiencia ===== -->
+    <!-- ===== Experience Section ===== -->
     <section id="experience" class="tech-bg">
         <div class="container">
-            <h2 class="section-title">Experiencia Profesional y Voluntariado</h2>
-            <!-- Contenedor de la línea de tiempo -->
+            <h2 class="section-title">Professional Experience and Volunteering</h2>
+            <!-- Timeline container -->
             <div class="timeline-container">
-                <!-- Item Experiencia 1 -->
-                <div class="timeline-item card hover-lift-xl"> <!-- Añadida clase card y hover -->
+                <!-- Experience Item 1 -->
+                <div class="timeline-item card hover-lift-xl">
                     <span class="timeline-line"></span>
-                    <div> <!-- Quitado ml-4, padding se encarga -->
-                         <p class="date">Junio 2024 - Presente</p>
+                    <div>
+                         <p class="date">June 2024 - Present</p>
                          <h3>Young Staff</h3>
                          <p class="company">SPE Bolivian Section</p>
-                         <p class="description">Participo en la organización de eventos y apoyo a las iniciativas de la Sección Bolivia del SPE en La Paz.</p>
+                         <p class="description">I participate in organizing events and support the initiatives of the SPE Bolivia Section in La Paz.</p>
                     </div>
                 </div>
-                 <!-- Item Experiencia 2 -->
+                 <!-- Experience Item 2 -->
                  <div class="timeline-item card hover-lift-xl">
                     <span class="timeline-line"></span>
                     <div>
-                         <p class="date">Enero 2024 - Junio 2024</p>
-                         <h3>Becario / Tesista</h3>
-                         <p class="company">ANH (Agencia Nacional de Hidrocarburos)</p>
-                         <p class="description">Realicé análisis de combustibles en laboratorio. Desarrollé un sistema de detección de adulteraciones en gasolina con aditivos de origen vegetal mediante Machine Learning. Apoyé trabajo de campo en análisis de gasolina.</p>
+                         <p class="date">January 2024 - June 2024</p>
+                         <h3>Intern / Thesis Student</h3>
+                         <p class="company">ANH (National Hydrocarbons Agency)</p>
+                         <p class="description">I performed laboratory fuel analysis. Developed a system for detecting adulteration in gasoline with plant-based additives using Machine Learning. Supported fieldwork in gasoline analysis.</p>
                     </div>
                 </div>
-                 <!-- Item Experiencia 3 -->
+                 <!-- Experience Item 3 -->
                  <div class="timeline-item card hover-lift-xl">
                     <span class="timeline-line"></span>
                     <div>
-                         <p class="date">Septiembre 2023 - Noviembre 2023</p>
-                         <h3>Consultor de Desarrollo de Software y Arquitectura</h3>
+                         <p class="date">September 2023 - November 2023</p>
+                         <h3>Software Development and Architecture Consultant</h3>
                          <p class="company">AGETIC</p>
-                         <p class="description">Desarrollé y diseñé soluciones de software utilizando JavaScript y múltiples tecnologías de bases de datos. Utilicé la metodología Scrum.</p>
+                         <p class="description">Developed and designed software solutions using JavaScript and multiple database technologies. Used Scrum methodology.</p>
                     </div>
                 </div>
-                 <!-- Item Experiencia 4 -->
+                 <!-- Experience Item 4 -->
                  <div class="timeline-item card hover-lift-xl">
                     <span class="timeline-line"></span>
                     <div>
-                         <p class="date">Abril 2023 - Mayo 2024</p>
-                         <h3>Presidente</h3>
+                         <p class="date">April 2023 - May 2024</p>
+                         <h3>President</h3>
                          <p class="company">SPE UMSA Student Chapter</p>
-                         <p class="description">Lideré el capítulo para obtener reconocimientos por excelencia en actividades académicas y sociales.</p>
+                         <p class="description">Led the chapter to achieve recognition for excellence in academic and social activities.</p>
                     </div>
                 </div>
-                 <!-- Item Experiencia 5 (Último) -->
-                
             </div>
         </div>
     </section>
 
-    <!-- ===== Sección Proyectos ===== -->
+    <!-- ===== Projects Section ===== -->
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Proyectos Destacados</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="project-grid">
-                <!-- Proyecto 1 -->
-                <div class="project-card card hover-lift-xl"> <!-- Añadida clase card y hover -->
+                <!-- Project 1 -->
+                <div class="project-card card hover-lift-xl">
                     <div class="project-card-image">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="project-icon"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m10 14-2 2 2 2"></path><path d="m14 18 2-2-2-2"></path></svg>
-                         <div class="project-card-overlay"></div>
+                                   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.anh.gob.bo%2Fw2019%2Fpublic%2Fimages%2Fanh_logo_color.png&f=1&nofb=1&ipt=946efa94016c724bb8a154d4a1f326f2093427578446266bd952c8b50c81eaf5" alt="AGETIC" class="project-icon">
+                         
                     </div>
                     <div class="project-card-content">
-                        <h3>Detección de Adulteración de Gasolina con ML</h3>
-                        <p>Sistema desarrollado durante la beca en ANH para identificar adulteraciones usando Machine Learning.</p>
+                        <h3>Detection of Gasoline Adulteration with ML</h3>
+                        <p>System developed during the ANH internship to identify adulterations using Machine Learning.</p>
                         <div class="tags">
                             <span class="tech-tag">Machine Learning</span>
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Química</span>
+                            <span class="tech-tag">Chemistry</span>
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 2 -->
+                <!-- Project 2 -->
                  <div class="project-card card hover-lift-xl">
                     <div class="project-card-image">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="project-icon"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
-                         <div class="project-card-overlay"></div>
+                                   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fva.presidencia.gob.bo%2Fimages%2Flogos-entidadesDesconcentradas%2Fagetic_ok.png&f=1&nofb=1&ipt=50cdfe7deac04611e6be83063d0f4ce51a6b770f84fce46b8b228e42dce1f910" alt="AGETIC" class="project-icon">
+                   
                     </div>
                     <div class="project-card-content">
-                        <h3>Soluciones de Software en AGETIC</h3>
-                        <p>Desarrollo y diseño de software con JavaScript y diversas bases de datos bajo metodología Scrum.</p>
+                        <h3>Software Solutions at AGETIC</h3>
+                        <p>Development and design of software with JavaScript and various databases under Scrum methodology.</p>
                         <div class="tags">
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Bases de Datos</span>
+                            <span class="tech-tag">Databases</span>
                             <span class="tech-tag">Scrum</span>
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 3 -->
+                <!-- Project 3 -->
                  <div class="project-card card hover-lift-xl">
                     <div class="project-card-image">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="project-icon"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4"></path><path d="M9 8h6"></path><path d="M9 12h6"></path><path d="M9 16h4"></path></svg>
-                         <div class="project-card-overlay"></div>
-                    </div>
+                                   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D61568424884884&f=1&nofb=1&ipt=3bbdacd3b7fc8deb8bd2c8b1c567038019ac1fd4d9d57ad253b7c9b7401609c6" alt="CIENCIA-LINK" class="project-icon">
+                   
+               </div>
                     <div class="project-card-content">
-                        <h3>Clasificación de tumores cereblales</h3>
-                        <p>Proyecto sobre Clasificación de tumores cereblaes usando Machine Learning keras</p>
+                        <h3>Brain Tumor Classification</h3>
+                        <p>Project on brain tumor classification using Machine Learning keras.</p>
                         <div class="tags">
-                            <span class="tech-tag">Investigación</span>
-                            <span class="tech-tag">Ing. Mecatronica</span>
+                            <span class="tech-tag">Research</span>
+                            <span class="tech-tag">Mechatronics Engineering</span>
                             <span class="tech-tag">Machine Learning</span>
                         </div>
                     </div>
@@ -1031,11 +1087,11 @@
 
     <section id="contact" class="">
        <div class="contact-container container">
-            <h2 class="section-title">Ponerse en Contacto</h2>
+            <h2 class="section-title">Get in Touch</h2>
             <p>
-            Estoy abierto a nuevas oportunidades y colaboraciones. No dudes en contactarme.
+            I am open to new opportunities and collaborations. Feel free to contact me.
             </p>
-            <!-- Enlaces de contacto -->
+            <!-- Contact links -->
             <div class="contact-links">
                 <a href="mailto:c.jhesid.lazo.n@gmail.com" target="_blank" class="contact-link">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
@@ -1044,7 +1100,7 @@
                 
                  <a href="https://wa.me/59178856666" target="_blank" class="contact-link">
                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    Teléfono
+                    Phone
                 </a>
                  <a href="https://linkedin.com/in/jhesidlazo" target="_blank" class="icon-link" >
                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="icon" ><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
@@ -1060,8 +1116,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="currentYear"></span> Carlos Jhesid Lazo Nina. Todos los derechos reservados.</p>
-            <p>Diseñado con <span class="heart">♥</span> y Código.</p>
+            <p>&copy; <span id="currentYear"></span> Carlos Jhesid Lazo Nina. All rights reserved.</p>
+            <p>Designed with <span class="heart">♥</span> and Code.</p>
         </div>
     </footer>
 
